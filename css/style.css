@@ -1382,6 +1382,10 @@ main {
 	padding-right: 0px;
 }
 
+.page-inner__text {
+	margin-bottom: 80px;
+}
+
 .page-inner__text strong {
 	font-size: 18px;
 }
@@ -1448,7 +1452,7 @@ main {
 }
 
 .subtitle {
-	font-size: 28px;
+	font-size: 26px;
 	margin-bottom: 40px;
 }
 
@@ -1633,6 +1637,10 @@ main {
 
 .page-inner__item--content .title {
 	margin-bottom: 36px;
+}
+
+.page-inner__text {
+	margin-bottom: 60px;
 }
 
 .page-inner__text strong {

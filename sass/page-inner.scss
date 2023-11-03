@@ -87,6 +87,12 @@
 	}
 	&__text {
 		margin-bottom: 116px;
+		@include media(mdx) {
+			margin-bottom: 80px;	
+		}
+		@include media(sm) {
+			margin-bottom: 60px;	
+		}
 		a {
 			position: relative;
 			color: #3D4048;
