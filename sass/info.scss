@@ -1,0 +1,131 @@
+@import 'responsive.sсss';
+
+.info {
+  padding-top: 40px;  
+  .title {
+    text-align: center;
+  }
+
+  &__block {
+    border: 1px solid #A9A9C3;
+    border-left: none;
+    border-right: none;
+    @include media(mdx) {
+       border: none;
+   } 
+   .container {
+      @include media(mdx) {
+        padding: 0; 
+      }
+    }
+  }
+  &__wrap {
+  	display: flex;
+  	flex-wrap: wrap;
+  	border: 1px solid #A9A9C3;
+    border-top: none;
+    border-bottom: none;
+    @include media(mdx) {
+      border: none;
+      border-top: 1px solid #A9A9C3;
+   }
+  }
+  &__item {
+  	width: calc(100% / 3);
+  	padding: 130px 38px;
+     @include media(lg) {
+      padding: 130px 30px;
+     }
+    @include media(lgs) {
+      padding: 100px 20px;
+    }
+  	@include media(mdx) {
+  		width: 100%;
+  		padding: 45px 20px;
+  	}
+  	@include media(sm) {
+  		padding: 40px 15px;
+  	}
+    &:nth-child(2) {
+      p:last-child {
+        text-align: left;
+        @include media(mdx) {
+          text-align: center;
+        }
+      }
+    }
+    &:not(:last-child) {
+      border-right: 1px solid #A9A9C3;
+      @include media(mdx) {
+        border-right: none;
+        border-bottom: 1px solid #A9A9C3;
+      }
+    }
+  }
+  &__subtitle {
+    min-height: 108px;
+  	font-size: 24px;
+  	line-height: 1.5;
+    color: #3D4048;
+  	text-align: center;
+    text-transform: uppercase;  
+  	margin-bottom: 42px;
+    font-family: RobotoCondensed, sans-serif;
+    font-weight: 700;
+    @include media(lgs) {
+      font-size: 22px;
+    }
+  	@include media(mdx) {
+      min-height: auto;
+  		font-size: 20px;
+  		margin-bottom: 34px;		
+  	}
+  	@include media(sm) {
+  		font-size: 18px;
+  		margin-bottom: 25px;
+  	}
+  }
+  &__text {
+  	p {
+  		font-size: 18px;
+  		line-height: 2;
+  		color: #3D4048;
+  		text-align: center;
+  		@include media(mdx) {
+  			font-size: 16px;	
+  		}
+  		@include media(sm) {
+	  		font-size: 15px;
+	  	}
+  		&:not(:last-child) {
+  			margin-bottom: 10px;
+  			@include media(mdx) {
+  				margin-bottom: 8px;
+  			}
+  		}
+  		span {
+  			font-weight: 700;
+  		}
+  	}
+  	ol, ul {
+      margin: 0;
+      padding: 0;
+  		li {
+        list-style-position: inside;
+  			position: relative;
+  			font-size: 18px;
+  			line-height: 1.8;
+        color: #3D4048;
+  			margin-bottom: 10px;
+  			@include media(mdx) {
+  				font-size: 16px;	
+  				text-align: center;
+  				margin-bottom: 8px;	
+  			}
+  			@include media(sm) {
+		  		font-size: 15px;
+		  	}
+  		}
+  	}
+  }
+}

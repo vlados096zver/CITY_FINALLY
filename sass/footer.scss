@@ -1,0 +1,84 @@
+@import 'responsive.sсss';
+
+.footer {
+	background-color: #6A3EF4;
+	padding: 100px 0;
+	@include media(mdx) {
+		padding: 60px 0;
+	}
+	&__logo {
+		font-size: 32px;
+		line-height: 1.2;
+		color: #fff;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		font-family: Coiny, sans-serif;
+		@include media(mdx) {
+			text-align: center;
+		}
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		@include media(mdx) {
+			justify-content: center
+		}
+		@include media(sm) {
+			flex-direction: column;
+		}
+	}
+	&__elem {
+		display: block;
+		font-size: 24px;
+		line-height: 1.2;
+		color: #fff;
+		margin-bottom: 30px;
+		font-family: Roboto, sans-serif;
+		transition: 0.25s color;
+		@include media(mdx) {
+			font-size: 21px;
+			margin-bottom: 20px;
+		}
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+		&:hover {
+			color: rgba(255, 255, 255, 0.7);
+		}
+	}
+	&__holder {
+		display: flex;
+ 	   flex-direction: column;
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include media(mdx) {
+			display: contents; 
+		}
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 1.2;
+		color: #fff;
+		padding-right: 20px;
+		font-family: Roboto, sans-serif;
+		@include media(mdx) {
+			order: 2;
+			padding-right: 0px;	
+			margin-top: 18px;
+			text-align: center;
+		}
+	}
+	&__desc {
+		font-size: 24px;
+		line-height: 1.25;
+		color: #fff;
+		font-family: Roboto, sans-serif;
+		@include media(lgxs) {
+			font-size: 20px;
+			text-align: center;
+		}
+	}
+}

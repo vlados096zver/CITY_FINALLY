@@ -1,0 +1,248 @@
+
+.page-inner {
+	.doc__wrap {
+		padding-bottom: 16px;
+	}
+	&__holder {
+		position: relative;
+		padding-top: 70px;
+		 @include media(mdx) {
+		 	padding-top: 40px;
+		 }
+	}
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		@include media(mdx) {
+			display: block;
+		}
+	}
+	&__item {
+		&--block {
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: 520px;
+			min-height: 1010px;
+			background-color: #051367;
+			@include media(mdx) {
+				position: relative;
+				height: initial;
+				min-height: 500px;
+				width: calc(100% + 40px);
+				margin-left: -20px;
+				top: initial;
+				right: initial;
+			}
+			.contacts__item--form {
+				width: 100%;
+				@include media(mdx) {
+					padding: 20px;
+				}
+				&:after {
+					background-size: initial;
+					background-position: bottom 22px center;
+					@include media(mdx) {
+						display: none;
+					}
+				}
+			}
+			&:after {
+				position: absolute;
+				content: '';
+				z-index: 2;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background: rgba(5, 19, 103, 0.7);
+			}
+			.title {
+				position: relative;
+			    z-index: 3;
+			    color: #fff;
+			    text-align: center;
+			}
+		}
+		&--content {
+			width: calc(100vw - 560px);
+			max-width: 1020px;
+			padding-right: 20px;
+			@include media(mdx) {
+				width: 100%;
+				max-width: 100%;
+				padding-right: 0px;
+			}
+			.title {
+				color: #333;
+				margin-bottom: 45px;
+				@include media(sm) {
+					margin-bottom: 36px;
+				}
+			}
+		}
+	}
+	&__text {
+		margin-bottom: 116px;
+		a {
+			position: relative;
+			color: #3D4048;
+			font-weight: 500;
+			font-family: 'RobotoCondensed', sans-serif;
+			&:after {
+				position: absolute;
+				content: '';
+				left: 0;
+				bottom: 4px;
+				width: 100%;
+				height: 1px;
+				background-color: #3D4048;
+				transition: 0.25s width;
+			}
+			&:hover {
+				&:after {
+					width: 0;
+				}
+			}
+		}
+		strong {
+			font-size: 20px;
+			text-transform: uppercase;
+			font-weight: 700;
+			@include media(mdx) {
+				font-size: 18px;
+			}
+			@include media(sm) {
+				font-size: 16px;
+			}
+		}
+		ol, ul {
+			margin: 0;
+			padding: 0;
+			li {
+				list-style-position: inside;
+				position: relative;
+				font-size: 16px;
+				color: #3D4048;
+				line-height: 1.4;
+				@include media(sm) {
+					font-size: 15px;
+				}
+				&:not(:last-child) {
+					margin-bottom: 16px;
+				}
+			}
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.88;
+			color: #3D4048;
+			@include media(sm) {
+				font-size: 16px;
+			}
+			&:not(:last-child) {
+				padding-bottom: 2em;
+				@include media(mdx) {
+					padding-bottom: 1.5em;
+				}
+				@include media(sm) {
+					padding-bottom: 1em;
+				}
+			}
+		}
+		h2, h3, h4, h5, h6 {
+			color: #3D4048;
+			text-transform: uppercase;
+			padding-bottom: 34px;
+			font-weight: 700;
+			@include media(mdx) {
+				padding-bottom: 30px;
+			}
+			@include media(sm) {
+				padding-bottom: 25px;
+			}
+		}
+		h2 {
+			font-size: 36px;
+			@include media(mdx) {
+				font-size: 32px;
+			}
+			@include media(sm) {
+				font-size: 26px;
+			}
+			@include media(small) {
+				font-size: 22px;
+			}
+		}
+		h3 {
+			font-size: 30px;
+			@include media(mdx) {
+				font-size: 26px;
+			}
+			@include media(sm) {
+				font-size: 22px;
+			}
+			@include media(small) {
+				font-size: 19px;
+			}
+		}
+		h4 {
+			font-size: 26px;
+			@include media(mdx) {
+				font-size: 24px;
+			}
+			@include media(sm) {
+				font-size: 20px;
+			}
+			@include media(small) {
+				font-size: 18px;
+			}
+		}
+		h5 {
+			font-size: 24px;
+			@include media(mdx) {
+				font-size: 22px;
+			}
+			@include media(sm) {
+				font-size: 19px;
+			}
+			@include media(small) {
+				font-size: 17px;
+			}
+		}
+		h6 {
+			font-size: 22px;
+			@include media(mdx) {
+				font-size: 20px;
+			}
+			@include media(sm) {
+				font-size: 18px;
+			}
+			@include media(small) {
+				font-size: 16px;
+			}
+		}
+		blockquote {
+			background: linear-gradient(87.35deg, #F0C6FA -6.67%, #E2CCF9 37.96%, #CED3F8 71.58%, #BFD9F7 104.62%);
+			border-radius: 4px;
+			padding: 20px;
+			margin-bottom: 36px;
+			p {
+				color: #3D4048;
+				font-weight: 500;
+				&:not(:last-child) {
+					padding-bottom: 2px;
+					@include media(mdx) {
+						padding-bottom: 2px;
+					}
+					@include media(sm) {
+						padding-bottom: 2px;
+					}
+				}
+			}
+		}
+	}
+}
